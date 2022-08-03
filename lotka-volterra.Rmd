@@ -116,8 +116,9 @@ approx_lk_df <- data.frame(approx_lk) %>%
   pivot_longer(cols = c(x,y), names_to = "species", values_to = "population")
 
 # Plot it! 
+#I made the lines a little thicker, they look better when they're thinner than this
 ggplot(data = approx_lk_df, aes(x = time, y = population)) +
-  geom_line(aes(color = species))
+  geom_line(aes(color = species), size = 2)
 ```
 
 
